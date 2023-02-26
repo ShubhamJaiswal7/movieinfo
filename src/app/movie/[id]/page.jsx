@@ -29,9 +29,9 @@ export default async function MoviePage({ params }) {
           alt="Movie poster"
         ></Image>
         <div className="p-2">
-          <h2 className="text-lg mb-3 font-bold">
+          <h1 className="text-lg mb-3 font-bold">
             {movie.title || movie.name}
-          </h2>
+          </h1>
           <p className="text-lg mb-3">
             <span className="font-semibold mr-1">Overview:</span>
             {movie.overview}
@@ -41,8 +41,16 @@ export default async function MoviePage({ params }) {
             {movie.release_date || movie.first_air_date}
           </p>
           <p className="mb-3">
-            <span className="font-semibold mr-1">Rating:</span>
+            <span className="font-semibold mr-1">Like:</span>
             {movie.vote_count}
+          </p>
+          <p className="mb-3">
+            <span className="font-semibold mr-1">Rating:</span>
+            {movie.vote_average}
+          </p>
+          <p className="mb-3">
+            <span className="font-semibold mr-1">Language:</span>
+            {movie.original_language}
           </p>
         </div>
       </div>
